@@ -3303,8 +3303,50 @@
 
 
                             </h2>
-                            <div style="max-width:1100px; margin:30px auto 0; text-align:left; font-size:17px; line-height:1.75;">
-                              <p>La <strong>5.ª Semana de la Geofísica</strong> se llevó a cabo del <strong>4 al 8 de noviembre de 2025</strong> en las instalaciones de la Universidad Industrial de Santander, sede Bucaramanga. Durante cinco días, el evento reunió a destacados expertos nacionales e internacionales, estudiantes, profesionales e investigadores interesados en la geofísica, la inteligencia artificial, la geología ambiental y otras áreas relacionadas con las geociencias.</p>
+                            <style>
+                              .v-semana-resena {
+                                display: grid;
+                                grid-template-columns: minmax(0, 1fr) minmax(320px, 480px);
+                                gap: 50px;
+                                max-width: 1300px;
+                                margin: 30px auto 0;
+                                align-items: start;
+                                text-align: left;
+                              }
+
+                              .v-semana-resena__texto {
+                                font-size: 17px;
+                                line-height: 1.75;
+                              }
+
+                              .v-semana-resena__imagenes {
+                                display: grid;
+                                gap: 24px;
+                              }
+
+                              .v-semana-resena__imagenes img {
+                                display: block;
+                                width: 100%;
+                                height: auto;
+                                border-radius: 10px;
+                                box-shadow: 0 7px 22px rgba(0, 0, 0, .14);
+                              }
+
+                              @media (max-width: 900px) {
+                                .v-semana-resena {
+                                  grid-template-columns: 1fr;
+                                }
+
+                                .v-semana-resena__imagenes {
+                                  max-width: 650px;
+                                  margin: 0 auto;
+                                }
+                              }
+                            </style>
+
+                            <div class="v-semana-resena">
+                              <div class="v-semana-resena__texto">
+                                <p>La <strong>5.ª Semana de la Geofísica</strong> se llevó a cabo del <strong>4 al 8 de noviembre de 2025</strong> en las instalaciones de la Universidad Industrial de Santander, sede Bucaramanga. Durante cinco días, el evento reunió a destacados expertos nacionales e internacionales, estudiantes, profesionales e investigadores interesados en la geofísica, la inteligencia artificial, la geología ambiental y otras áreas relacionadas con las geociencias.</p>
 
                               <p>Esta quinta edición se consolidó como uno de los encuentros académicos y científicos más importantes del país en su campo. Fue un espacio en el que convergieron la innovación, la interdisciplinariedad y la búsqueda de soluciones para los desafíos actuales relacionados con la exploración de fuentes de energía, el monitoreo ambiental, la transición energética y la gestión del riesgo.</p>
 
@@ -3312,7 +3354,20 @@
 
                               <p>Además de las actividades académicas, se desarrollaron espacios sociales y de integración que permitieron fortalecer redes de colaboración, compartir experiencias y generar nuevas conexiones entre los participantes.</p>
 
-                              <p>La <strong>5.ª Semana de la Geofísica</strong> fue una experiencia de aprendizaje, intercambio científico y construcción colectiva, que dejó grandes recuerdos y contribuyó al fortalecimiento de la comunidad geocientífica en Colombia.</p>
+                                <p>La <strong>5.ª Semana de la Geofísica</strong> fue una experiencia de aprendizaje, intercambio científico y construcción colectiva, que dejó grandes recuerdos y contribuyó al fortalecimiento de la comunidad geocientífica en Colombia.</p>
+                              </div>
+
+                              <aside class="v-semana-resena__imagenes" aria-label="Fotografías de la V Semana de la Geofísica">
+                                <img src="./Semana_geofisica_VI_files/v_semana_2025_conferencia_1.jpg"
+                                     alt="Conferencia durante la V Semana de la Geofísica"
+                                     loading="lazy">
+                                <img src="./Semana_geofisica_VI_files/v_semana_2025_conferencia_2.jpg"
+                                     alt="Participantes en una conferencia de la V Semana de la Geofísica"
+                                     loading="lazy">
+                                <img src="./Semana_geofisica_VI_files/v_semana_2025_conferencia_3.jpg"
+                                     alt="Presentación académica durante la V Semana de la Geofísica"
+                                     loading="lazy">
+                              </aside>
                             </div>
 
                             <style>
