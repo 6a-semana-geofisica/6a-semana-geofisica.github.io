@@ -1455,10 +1455,11 @@ html {
 <div class="bloque-patrocinio">
     <h3>Apoyan:</h3>
 
-    <div class="grid-logos">
+    <div class="grid-logos grid-logos--apoyan">
+        <img src="Semana_geofisica_VI_files/hdsplogo.svg" alt="Grupo HDSP UIS">
+        <img src="Semana_geofisica_VI_files/gigba_logo.png" alt="Grupo GIGBA UIS">
+        <img src="Semana_geofisica_VI_files/gidco.png" alt="Grupo GIDCO">
         <img src="Semana_geofisica_VI_files/logo_SIGAC_2024.png" alt="Semillero de Investigación SIGAC">
-        <img src="Semana_geofisica_VI_files/gidco.png" alt="GIDCO">
-        <img src="Semana_geofisica_VI_files/hdsplogo.svg" alt="HDSP">
     </div>
 </div>
 
@@ -1511,6 +1512,23 @@ html {
 
 .grid-logos img:hover {
   transform: scale(1.08);
+}
+
+.grid-logos--apoyan {
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.grid-logos--apoyan img {
+  width: 210px;
+  height: 110px;
+  max-height: none;
+}
+
+@media (max-width: 900px) {
+  .grid-logos--apoyan {
+    flex-wrap: wrap;
+  }
 }
 </style>
 
