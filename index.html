@@ -945,6 +945,12 @@
       justify-content: center;
     }
 
+    #comite-cientifico-administrativo > .evenz-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     #comite-organizador > .evenz-row > .evenz-col {
       float: none;
       flex: 0 0 25%;
@@ -954,8 +960,18 @@
       margin-right: 0;
     }
 
+    #comite-cientifico-administrativo > .evenz-row > .evenz-col {
+      float: none;
+      flex: 0 0 25%;
+      width: 25%;
+      max-width: 25%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
     @media only screen and (max-width: 992px) {
-      #comite-organizador > .evenz-row > .evenz-col {
+      #comite-organizador > .evenz-row > .evenz-col,
+      #comite-cientifico-administrativo > .evenz-row > .evenz-col {
         flex-basis: 50%;
         width: 50%;
         max-width: 50%;
@@ -963,7 +979,8 @@
     }
 
     @media only screen and (max-width: 600px) {
-      #comite-organizador > .evenz-row > .evenz-col {
+      #comite-organizador > .evenz-row > .evenz-col,
+      #comite-cientifico-administrativo > .evenz-row > .evenz-col {
         flex-basis: 100%;
         width: 100%;
         max-width: 100%;
@@ -3600,7 +3617,7 @@
                             </div>
                           </div>
                           <hr class="evenz-spacer-m">
-                          <div id="vc_gid-1770097557678-c689244c-57b2-10" class="evenz-container evenz-post-grid">
+                          <div id="comite-cientifico-administrativo" class="evenz-container evenz-post-grid">
                             <div class="evenz-row">
                               <div class="evenz-col evenz-col__post evenz-s12 evenz-m6 evenz-l3">
                                 <article id="membercard-2302"
@@ -3609,7 +3626,7 @@
                                     <div class="evenz-bgimg evenz-bgimg--full">
                                       <img loading="lazy" decoding="async" width="370" height="450"
                                         src="./Semana_geofisica_VI_files/Henry_Arguello.png"
-                                        class="evenz-post__thumb wp-post-image" alt="">
+                                        class="evenz-post__thumb wp-post-image" alt="Henry Arguello">
                                     </div>
                                     <a class="evenz-hov" href="https://www.linkedin.com/in/henry-arguello-2905929/"
                                       data-feathr-click-track="true" data-feathr-link-aids="588f5ef88e80271ed938605b">
@@ -3640,7 +3657,7 @@
                                     <div class="evenz-bgimg evenz-bgimg--full">
                                       <img loading="lazy" decoding="async" width="370" height="450"
                                         src="./Semana_geofisica_VI_files/Sait_Khurama.png"
-                                        class="evenz-post__thumb wp-post-image" alt="">
+                                        class="evenz-post__thumb wp-post-image" alt="Sait Khurama">
                                     </div>
                                     <a class="evenz-hov" href="https://www.linkedin.com/in/saitkhurama/"
                                       data-feathr-click-track="true" data-feathr-link-aids="588f5ef88e80271ed938605b">
@@ -3663,28 +3680,6 @@
                                 </article>
                               </div>
                               <div class="evenz-col evenz-col__post evenz-s12 evenz-m6 evenz-l3">
-                                <article id="membercard-2297"
-                                  class="evenz-post evenz-post__member evenz-darkbg evenz-negative post-2297 evenz_member type-evenz_member status-publish has-post-thumbnail hentry evenz_membertype-industry-Comité-Científico">
-                                  <div class="evenz-post__header evenz-darkbg  evenz-negative">
-                                    <div class="evenz-bgimg evenz-bgimg--full">
-                                      <img loading="lazy" decoding="async" width="370" height="450"
-                                        src="./Semana_geofisica_VI_files/Ana_Celina.jpeg"
-                                        class="evenz-post__thumb wp-post-image" alt="">
-                                    </div>
-                                  </div>
-                                  <div class="evenz-post__content">
-                                    <p class="evenz-meta evenz-small evenz-role">
-                                      Comité Administrativo </p>
-                                    <h4 class="evenz-post__title evenz-cutme-t-2">Ana Celina</h4>
-                                    <p class="evenz-meta evenz-small evenz-social">
-                                      <span class="evenz-sociallink" aria-hidden="true"><i
-                                          class="qt-socicon-wordpress"></i></span>
-                                    </p>
-                                  </div>
-
-                                </article>
-                              </div>
-                              <div class="evenz-col evenz-col__post evenz-s12 evenz-m6 evenz-l3">
                                 <article id="membercard-2330"
                                   class="evenz-post evenz-post__member evenz-darkbg evenz-negative post-2330 evenz_member type-evenz_member status-publish has-post-thumbnail hentry evenz_membertype-industry-Comité-Científico">
                                   <div class="evenz-post__header evenz-darkbg  evenz-negative">
@@ -3698,6 +3693,28 @@
                                     <p class="evenz-meta evenz-small evenz-role">
                                       Comité Científico </p>
                                     <h4 class="evenz-post__title evenz-cutme-t-2">Ana Beatriz</h4>
+                                    <p class="evenz-meta evenz-small evenz-social">
+                                      <span class="evenz-sociallink" aria-hidden="true"><i
+                                          class="qt-socicon-wordpress"></i></span>
+                                    </p>
+                                  </div>
+
+                                </article>
+                              </div>
+                              <div class="evenz-col evenz-col__post evenz-s12 evenz-m6 evenz-l3">
+                                <article id="membercard-2297"
+                                  class="evenz-post evenz-post__member evenz-darkbg evenz-negative post-2297 evenz_member type-evenz_member status-publish has-post-thumbnail hentry evenz_membertype-industry-Comité-Científico">
+                                  <div class="evenz-post__header evenz-darkbg  evenz-negative">
+                                    <div class="evenz-bgimg evenz-bgimg--full">
+                                      <img loading="lazy" decoding="async" width="370" height="450"
+                                        src="./Semana_geofisica_VI_files/Ana_Celina.jpeg"
+                                        class="evenz-post__thumb wp-post-image" alt="">
+                                    </div>
+                                  </div>
+                                  <div class="evenz-post__content">
+                                    <p class="evenz-meta evenz-small evenz-role">
+                                      Comité Administrativo </p>
+                                    <h4 class="evenz-post__title evenz-cutme-t-2">Ana Celina</h4>
                                     <p class="evenz-meta evenz-small evenz-social">
                                       <span class="evenz-sociallink" aria-hidden="true"><i
                                           class="qt-socicon-wordpress"></i></span>
