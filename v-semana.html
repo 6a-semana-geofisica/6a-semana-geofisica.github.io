@@ -3336,11 +3336,19 @@
                               .v-semana-resena__lista {
                                 margin: 0 0 24px;
                                 padding: 0;
-                                list-style: none;
+                                list-style: none !important;
                               }
 
                               .v-semana-resena__lista li {
                                 margin-bottom: 8px;
+                                padding-left: 0;
+                                list-style: none !important;
+                              }
+
+                              .v-semana-resena__lista li::marker,
+                              .v-semana-resena__lista li::before {
+                                display: none !important;
+                                content: none !important;
                               }
 
                               .v-semana-resena__imagenes {
@@ -3426,6 +3434,9 @@
                                      loading="lazy">
                                 <img src="./Semana_geofisica_VI_files/v_semana_2025_conferencia_3.jpg"
                                      alt="Presentación académica durante la V Semana de la Geofísica"
+                                     loading="lazy">
+                                <img src="./Semana_geofisica_VI_files/v_semana_2025_conferencia_4.jpg"
+                                     alt="Conferencia sobre inversión sísmica durante la V Semana de la Geofísica"
                                      loading="lazy">
                               </aside>
                             </div>
