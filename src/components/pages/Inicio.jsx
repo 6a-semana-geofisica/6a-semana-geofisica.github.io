@@ -1,8 +1,10 @@
-// import React from 'react'
-import Hero from '../static/Hero.jsx'
-import AcercaDelEvento from '../ui/AcercaDelEvento.jsx'
-import Card from '../ui/Card.jsx'
-import { teamMembers } from '../data/Personal.js'
+import Hero from '../static/Hero.jsx';
+import AcercaDelEvento from '../ui/AcercaDelEvento.jsx';
+import Card from '../ui/Card.jsx';
+import { teamMembers } from '../../data/Personal.js';
+import VideoHero from '../static/VideoHero.jsx';
+import Button from '../ui/Button.jsx'; // Asegúrate de que esta ruta sea correcta
+import { DataPages } from '../../data/Vistas.js'; // Asegúrate de que esta ruta sea correcta
 
 const Inicio = () => {
 
@@ -13,7 +15,10 @@ const Inicio = () => {
     window.open(enlaceSeguro, '_blank', 'noopener,noreferrer');
   };
 
-  // Filtramos la data
+  // Obtenemos el título de la página de inicio desde Vistas.js (id: 1)
+  const tituloInicio = DataPages.find(page => page.id === 1)?.titleHero || "VI Semana de la Geofísica";
+
+  // Filtramos la data de los miembros del equipo
   const comiteOrganizador = teamMembers.filter(m => m.comite === "Comité Organizador");
   const comiteApoyo = teamMembers.filter(m => m.comite === "Comite de Apoyo");
   
@@ -24,8 +29,22 @@ const Inicio = () => {
 
   return (
     <div>
-      {/* Sección del banner principal */}
-      <Hero />
+      {/* Sección del banner principal (Ahora estandarizado con botones) */}
+      <Hero titulo={tituloInicio}>
+          <Button
+                className="w-full sm:w-auto mr-12"
+                onClick={() => console.log('Ir a subir resumen')}
+            >
+                SUBE TU RESUMEN
+            </Button>
+
+            <Button 
+                className="w-full sm:w-auto border ml-12 border-white/20 bg-gradient-to-br from-white/10 to-white/5 shadow-none backdrop-blur-sm hover:border-gold-400 hover:text-gold-400"
+                onClick={() => console.log('Ver noticias')}
+            >
+                NOTICIAS Y ACTUALIZACIONES
+          </Button>
+      </Hero>
       
       {/* Sección de información y descripción del evento */}
       <AcercaDelEvento />
@@ -54,7 +73,7 @@ const Inicio = () => {
                   key={miembro.id}
                   name={miembro.name}
                   role={miembro.comite}
-                  avatarImg={miembro.imagen} /* NUEVO: Pasamos la imagen al avatar */
+                  avatarImg={miembro.imagen} 
                   btnText1={miembro.linkedin ? "LinkedIn" : "Perfil"}
                   btnText2="Contacto"
                   onBtn1Click={() => abrirLinkedIn(miembro.linkedin)}
@@ -75,7 +94,7 @@ const Inicio = () => {
                   key={miembro.id}
                   name={miembro.name}
                   role={miembro.comite}
-                  avatarImg={miembro.imagen} /* NUEVO: Pasamos la imagen al avatar */
+                  avatarImg={miembro.imagen}
                   btnText1={miembro.linkedin ? "LinkedIn" : "Perfil"}
                   btnText2="Contacto"
                   onBtn1Click={() => abrirLinkedIn(miembro.linkedin)}
@@ -96,7 +115,7 @@ const Inicio = () => {
                   key={miembro.id}
                   name={miembro.name}
                   role={miembro.comite} 
-                  avatarImg={miembro.imagen} /* NUEVO: Pasamos la imagen al avatar */
+                  avatarImg={miembro.imagen}
                   btnText1={miembro.linkedin ? "LinkedIn" : "Perfil"}
                   btnText2="Contacto"
                   onBtn1Click={() => abrirLinkedIn(miembro.linkedin)}
@@ -108,8 +127,11 @@ const Inicio = () => {
 
         </div>
       </section>
+
+      {/* Sección de Video */}
+      <VideoHero/>
     </div>
   )
 }
 
-export default Inicio
+export default Inicio;

@@ -1,9 +1,13 @@
-import React from 'react'
-
 const AcercaDelEvento = () => {
   return (
     <section className="bg-slate-50/50 px-4 py-16 sm:px-6 md:py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">
+
+        <div className="mb-20 flex items-center justify-center gap-4">
+          <h3 className="text-center  front-['Montserrat'] italic tracking-widest text-slate-900 sm:text-2xl">
+            "Lo importante es no dejar de cuestionar". (Albert Einstein) 
+          </h3>
+        </div>
         
         {/* Título con separadores laterales */}
         <div className="mb-10 flex items-center justify-center gap-4">

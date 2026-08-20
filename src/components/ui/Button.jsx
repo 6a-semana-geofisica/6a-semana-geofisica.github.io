@@ -1,5 +1,4 @@
 // src/components/ui/Button.jsx
-import React from 'react'
 
 const Button = ({ children, onClick, className = '', type = 'button', ...props }) => {
   return (

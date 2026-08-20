@@ -15,24 +15,18 @@ const menuItems = [
   {
     label: 'Contacto',
     to: '/contacto',
-    children: [{ label: 'Canales de atención', to: '/canales-atencion' }],
   },
   {
     label: 'Programa',
     to: '/programa',
-    children: [{ label: 'Agenda oficial', to: '/programa/agenda' }],
   },
   {
     label: 'Cursos',
     to: '/cursos',
-    children: [{ label: 'Explora los cursos', to: '/cursos/explora' }],
   },
   {
     label: 'Patrocinadores',
     to: '/patrocinadores',
-    children: [
-      { label: 'Apoyo institucional y empresas patrocinadoras', to: '/patrocinadores/apoyo' },
-    ],
   },
   { label: 'Apoyo a estudiantes', to: '/apoyo-estudiantes' },
   { label: 'Aprende de Geofísica', to: '/aprende-geofisica' },
@@ -117,7 +111,7 @@ const Navbar = () => {
             <span className="flex flex-col gap-1.5">
               {/* Aplicado Montserrat Semibold al título principal */}
               <span className="font-['Montserrat'] text-2xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem]">
-                6ª Semana de la Geofísica
+                VI Semana de la Geofísica
               </span>
               {/* Aplicado Montserrat Semibold al subtítulo de fecha */}
               <span className="flex items-center gap-2 text-lg font-['Montserrat'] font-semibold text-gold-600 sm:text-xl">
