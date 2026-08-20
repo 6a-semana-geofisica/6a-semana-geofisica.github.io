@@ -3,9 +3,10 @@ import { DataPages } from '../../data/Vistas.js';
 import Button from '../ui/Button.jsx';
 import Video from '../static/VideoHero.jsx';
 import AnimatedButton from '../ui/AnimatedButton.jsx';
-import Recepcion1 from '../../assets/flyers/recepcion_resumenes_poster.png'
-import Recepcion2 from '../../assets/flyers/recepcion_resumenes_posters_evento.png'
-import Recepcion3 from '../../assets/flyers/apoyo_estudiantes_evento.png'
+import Recepcion1 from '../../assets/flyers/recepcion_resumenes_2026.png'
+import Recepcion2 from '../../assets/flyers/recepcion_resumenes_poster.png'
+import Recepcion3 from '../../assets/flyers/recepcion_resumenes_posters_evento.png'
+
 
 const tituloResumenes = DataPages.find(page => page.id === 10)?.titleHero
 
