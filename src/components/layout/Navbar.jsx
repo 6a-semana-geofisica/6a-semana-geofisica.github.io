@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router'
-import eventLogo from '../../assets/logos/2026_VI_SEMANA_GEOFÍSICA.jpg'
+import OptimizedImage from '../ui/OptimizedImage.jsx'
+import eventLogo from '../../assets/logos/2026_VI_SEMANA_GEOFÍSICA.avif'
 
 const menuItems = [
   { label: 'Inicio', to: '/', end: true },
@@ -67,12 +68,14 @@ const Chevron = () => (
 
 const Logo = ({ className }) => (
   <span
-    className={`flex shrink-0 items-center justify-center overflow-hidden bg-white p-2 ${className}`}
+    className={`flex shrink-0 items-center justify-center bg-white p-2 ${className}`}
   >
-    <img
+    <OptimizedImage
       src={eventLogo}
       alt="Logo de la 6ª Semana de la Geofísica"
-      className="h-full w-full object-contain"
+      className="h-full w-full"
+      imgClassName="object-contain"
+      priority
     />
   </span>
 )
@@ -80,6 +83,14 @@ const Logo = ({ className }) => (
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   const [openSubmenu, setOpenSubmenu] = useState(null)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   const closeMenu = () => {
     setMenuOpen(false)
@@ -107,7 +118,7 @@ const Navbar = () => {
             className="flex items-center gap-4 sm:gap-6"
             aria-label="Ir a Inicio"
           >
-            <Logo className="h-16 w-16 rounded-2xl sm:h-24 sm:w-24" />
+            <Logo className="h-20 w-20 rounded-2xl sm:h-28 sm:w-28" />
             <span className="flex flex-col gap-1.5">
               {/* Aplicado Montserrat Semibold al título principal */}
               <span className="font-['Montserrat'] text-2xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem]">
@@ -132,11 +143,15 @@ const Navbar = () => {
               </span>
             </span>
           </Link>
-          <Logo className="hidden h-20 w-20 rounded-2xl sm:flex lg:h-28 lg:w-28" />
+          <Logo className="hidden h-24 w-24 rounded-2xl sm:flex lg:h-32 lg:w-32" />
         </div>
       </header>
 
-      <nav className="sticky top-0 z-50 bg-gradient-to-br from-brand-950 via-brand-900 to-brand-800 shadow-sm">
+      <nav className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-brand-950/90 shadow-lg shadow-brand-950/20 backdrop-blur-md border-b border-white/5'
+          : 'bg-gradient-to-br from-brand-950 via-brand-900 to-brand-800 shadow-sm'
+      }`}>
         <div className="mx-auto flex min-h-16 max-w-7xl items-center justify-between gap-4 px-4 py-2.5 sm:px-6 lg:px-8">
           <Link
             to="/"

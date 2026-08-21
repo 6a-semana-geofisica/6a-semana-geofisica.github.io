@@ -1,10 +1,11 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router'
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router'
+import { AnimatePresence, motion } from 'framer-motion'
 
-// import layout components
 import Navbar from './components/layout/Navbar.jsx'
 import Footer from './components/layout/Footer.jsx'
+import ScrollProgress from './components/ui/ScrollProgress.jsx'
+import ScrollToTop from './components/ui/ScrollToTop.jsx'
 
-// imports vistas de la pagina
 import Inicio from './components/pages/Inicio.jsx'
 import Registro from './components/pages/Registro.jsx'
 import Contacto from './components/pages/Contacto.jsx';
@@ -16,38 +17,57 @@ import Aprende from './components/pages/Aprende.jsx';
 import Vgeofisica from './components/pages/Vgeofisica.jsx';
 import Resumenes from './components/pages/Resumenes.jsx';
 
-function App() {
+const pageVariants = {
+  initial: { opacity: 0, y: 12 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -12 },
+};
 
+const pageTransition = {
+  type: 'tween',
+  ease: [0.23, 1, 0.32, 1],
+  duration: 0.35,
+};
+
+function AnimatedRoutes() {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={location.pathname}
+        variants={pageVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={pageTransition}
+      >
+        <Routes location={location}>
+          <Route path='/' element={<Inicio/>} />
+          <Route path='/registro' element={<Registro/>}/>
+          <Route path='/contacto' element={<Contacto/>}/>
+          <Route path='/programa' element={<Programa/>}/>
+          <Route path='/cursos' element={<Cursos/>}/>
+          <Route path='/patrocinadores' element={<Patrocinadores/>}/>
+          <Route path='/apoyo-estudiantes' element={<Estudiantes/>}/>
+          <Route path='/aprende-geofisica' element={<Aprende/>}/>
+          <Route path='/v-semana' element={<Vgeofisica/>}/>
+          <Route path='/recepcion-resumenes' element={<Resumenes/>}/>
+        </Routes>
+      </motion.div>
+    </AnimatePresence>
+  );
+}
+
+function App() {
   return (
     <Router>
       <main>
-
+        <ScrollProgress />
+        <ScrollToTop />
         <Navbar/>
-
-        <Routes>
-          
-          <Route path='/' element = {
-            <>
-              <Inicio/>
-            </>
-          }
-          />
-
-          {/* renderizar más vistas */}
-          <Route path='/registro' element = { <Registro/> }/>
-          <Route path='/contacto' element = { <Contacto/> }/>
-          <Route path='/programa' element = { <Programa/> }/>
-          <Route path='/cursos' element = { <Cursos/> }/>
-          <Route path='/patrocinadores' element = { <Patrocinadores/> }/>
-          <Route path='/apoyo-estudiantes' element = { <Estudiantes/> }/>
-          <Route path='/aprende-geofisica' element = { <Aprende/> }/>
-          <Route path='/v-semana' element = { <Vgeofisica/> }/>
-          <Route path='/recepcion-resumenes' element= { <Resumenes/> }/>
-
-        </Routes>
-          
-          <Footer/>
-
+        <AnimatedRoutes/>
+        <Footer/>
       </main>
     </Router>
   )

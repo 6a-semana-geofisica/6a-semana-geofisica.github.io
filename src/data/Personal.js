@@ -1,6 +1,6 @@
-import AnaC from '../assets/team/Ana_Beatriz.png'
-import AnaA from '../assets/team/Ana_Celina.jpeg'
-import Cristina from '../assets/team/Foto_cristina.jpg'
+import AnaC from '../assets/team/Ana_Beatriz.avif'
+import AnaA from '../assets/team/Ana_Celina.avif'
+import Cristina from '../assets/team/Foto_cristina.avif'
 
 export const teamMembers = [
     {

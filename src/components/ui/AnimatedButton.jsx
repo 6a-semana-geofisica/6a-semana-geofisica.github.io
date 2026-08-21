@@ -1,10 +1,11 @@
+import { motion } from 'framer-motion';
+import { useMagnetic } from '../../hooks/useMagnetic.js';
+
 export const AnimatedButton = ({ children, onClick, className = '', type = 'button' }) => {
+  const { x, y, handlers } = useMagnetic(0.2);
+
   return (
     <>
-      {/* 
-        Inyectamos los keyframes y el clip-path directamente en el componente 
-        para que sea 100% portable y no ensucie tu CSS global.
-      */}
       <style>
         {`
           .btn-31-effect:hover .text-inner {
@@ -26,24 +27,22 @@ export const AnimatedButton = ({ children, onClick, className = '', type = 'butt
         `}
       </style>
 
-      <button
+      <motion.button
         type={type}
         onClick={onClick}
+        style={{ x, y }}
+        {...handlers}
         className={`group btn-31-effect relative overflow-hidden border border-gold-500/50 bg-brand-950 px-8 py-3.5 font-['Montserrat'] text-sm font-bold uppercase tracking-widest text-white transition-all md:text-base ${className}`}
       >
-        {/* Capa de fondo dorada que se revela en diagonal */}
-        <div className="clip-bg absolute inset-0 bg-gradient-to-br from-gold-400 to-gold-600"></div>
-
-        {/* Contenedor del texto con overflow oculto para el efecto de caída */}
+        <div className="clip-bg absolute inset-0 bg-gradient-to-br from-gold-400 to-gold-600" />
         <span className="relative block overflow-hidden">
-          {/* El texto cambia de blanco a oscuro (brand-950) al hacer hover para contrastar con el oro */}
           <span className="text-inner relative block transition-colors duration-200 group-hover:text-brand-950">
             {children}
           </span>
         </span>
-      </button>
+      </motion.button>
     </>
-  )
-}
+  );
+};
 
-export default AnimatedButton
+export default AnimatedButton;

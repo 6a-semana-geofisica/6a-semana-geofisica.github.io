@@ -1,4 +1,6 @@
-import { useId } from 'react'
+import { useId, useRef, useState } from 'react'
+import { motion, useReducedMotion } from 'framer-motion'
+import OptimizedImage from './OptimizedImage.jsx'
 
 const Card = ({
   name = "Nombre Apellido",
@@ -11,20 +13,60 @@ const Card = ({
   onBtn2Click
 }) => {
   const uniqueId = useId()
+  const cardRef = useRef(null)
+  const reducedMotion = useReducedMotion()
+  const [glowPos, setGlowPos] = useState({ x: 0, y: 0 })
+  const [isHovered, setIsHovered] = useState(false)
 
   const gradientId = `cardGradient-${uniqueId}`
   const patternId = `triangles-${uniqueId}`
 
+  const handleMouseMove = (e) => {
+    if (reducedMotion || !cardRef.current) return
+    const rect = cardRef.current.getBoundingClientRect()
+    const centerX = rect.left + rect.width / 2
+    const centerY = rect.top + rect.height / 2
+    const deltaX = (e.clientX - centerX) / 20
+    const deltaY = (e.clientY - centerY) / 20
+    cardRef.current.style.transform = `perspective(1000px) rotateX(${-deltaY}deg) rotateY(${deltaX}deg) translateY(-4px)`
+    cardRef.current.style.boxShadow = '0 20px 40px rgba(0,0,0,0.15)'
+    setGlowPos({ x: e.clientX - rect.left, y: e.clientY - rect.top })
+  }
+
+  const handleMouseLeave = () => {
+    if (!cardRef.current) return
+    cardRef.current.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)'
+    cardRef.current.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)'
+    setIsHovered(false)
+  }
+
   return (
-    <div className="relative flex h-[384px] w-[300px] flex-col items-center rounded-[20px] bg-white font-['Montserrat'] shadow-lg ring-1 ring-slate-200 transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+    <motion.div
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={handleMouseLeave}
+      whileHover={{ y: -4, transition: { duration: 0.2 } }}
+      className="relative flex h-[384px] w-[300px] flex-col items-center overflow-hidden rounded-[20px] bg-white font-['Montserrat'] shadow-lg ring-1 ring-slate-200 transition-all duration-300"
+      style={{ transformStyle: 'preserve-3d' }}
+    >
+      {/* Mouse glow overlay */}
+      <div
+        className="pointer-events-none absolute inset-0 z-20 opacity-0 transition-opacity duration-300"
+        style={{
+          opacity: isHovered ? 1 : 0,
+          background: `radial-gradient(250px circle at ${glowPos.x}px ${glowPos.y}px, rgba(212, 169, 46, 0.12), transparent 60%)`,
+        }}
+      />
 
       {/* 1. Imagen de portada (Cover) */}
       <div className="h-[192px] w-full overflow-hidden rounded-t-[20px]">
         {coverImg ? (
-          <img
+          <OptimizedImage
             src={coverImg}
             alt="Fondo de la tarjeta"
             className="h-full w-full object-cover"
+            fill
           />
         ) : (
           /* Fondo geométrico azul + dorado */
@@ -114,10 +156,11 @@ const Card = ({
       {/* 2. Avatar circular */}
       <div className="absolute top-[135px] flex h-[114px] w-[114px] items-center justify-center rounded-full bg-white shadow-sm">
         {avatarImg ? (
-          <img
+          <OptimizedImage
             src={avatarImg}
             alt={`Avatar de ${name}`}
             className="h-[100px] w-[100px] rounded-full object-cover"
+            fill
           />
         ) : (
           /* Avatar SVG por defecto */
@@ -229,7 +272,7 @@ const Card = ({
 
       </div>
 
-    </div>
+    </motion.div>
   )
 }
 

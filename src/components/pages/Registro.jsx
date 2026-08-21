@@ -1,22 +1,31 @@
+import { useState } from 'react'
 import Hero from '../static/Hero.jsx'
 import Video from '../static/VideoHero.jsx'
 import AnimatedButton from '../ui/AnimatedButton.jsx'
 import Button from '../ui/Button.jsx'
+import InscripcionModal from '../ui/InscripcionModal.jsx'
 import { DataPages } from '../../data/Vistas.js';
 import Flyer  from '../../assets/flyers/apoyo_estudiantes.png'
 
 const Registro = () => {
   const tituloRegistro = DataPages.find(page => page.id === 2)?.titleHero || "Inscripción al evento";
+  const [modalOpen, setModalOpen] = useState(false)
+  const [modalKey, setModalKey] = useState(0)
+
+  const openModal = () => {
+    setModalKey((key) => key + 1)
+    setModalOpen(true)
+  }
 
   return (
     <div>
         <Hero titulo={tituloRegistro}>
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
             <Button
-                className="w-full sm:w-auto mr-12"
-                onClick={() => console.log('Ir a subir resumen')}
+              className="w-full sm:w-auto mr-12"
+              onClick={() => console.log('Ir a subir resumen')}
             >
-                SUBE TU RESUMEN
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhq-i8Raa3W6W2wPUhHqbriF4j08ck63dccxAKLYcZuP8PjQ/viewform">SUBE TU RESUMEN</a>
             </Button>
 
             <Button 
@@ -33,7 +42,7 @@ const Registro = () => {
           <div className="mx-auto max-w-7xl">
 
             <div className="mb-20 flex items-center justify-center gap-4">
-              <h3 className="text-center font-['Montserrat'] italic tracking-widest text-slate-900 sm:text-2xl">
+              <h3 className="text-center  front-['Montserrat'] italic tracking-widest text-slate-900 sm:text-2xl">
                 "Lo importante es no dejar de cuestionar". (Albert Einstein) 
               </h3>
             </div>
@@ -206,7 +215,7 @@ const Registro = () => {
                   Completa el formulario de inscripción haciendo clic en el botón disponible a continuación o escaneando el código QR del flyer.
                 </p>
                 <div className="flex w-full justify-start">
-                  <AnimatedButton onClick={() => console.log('Abriendo formulario')}>
+                  <AnimatedButton onClick={openModal}>
                     REGISTRARME
                   </AnimatedButton>
                 </div>
@@ -242,6 +251,8 @@ const Registro = () => {
 
         {/* Sección de video de fondo/cierre */}
         <Video/>
+
+        <InscripcionModal key={modalKey} open={modalOpen} onClose={() => setModalOpen(false)} />
 
     </div>
   )
