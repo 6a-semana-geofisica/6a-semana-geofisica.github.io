@@ -7,25 +7,33 @@ import Button from '../ui/Button.jsx';
 import OptimizedImage from '../ui/OptimizedImage.jsx';
 import { DataPages } from '../../data/Vistas.js';
 
+import logoUIS from '../../assets/organizaciones/logo_UIS.avif';
+import hdspLogo from '../../assets/organizaciones/hdsplogo.svg';
+import gigbaLogo from '../../assets/organizaciones/gigba_logo.avif';
+import gidcoLogo from '../../assets/organizaciones/gidco.avif';
+import logoSIGAC from '../../assets/organizaciones/logo_SIGAC_2024.avif';
+import logoMinciencias from '../../assets/organizaciones/logo_minciencias.avif';
+import logoANH from '../../assets/organizaciones/LOGO_ANH.avif';
+
 const tituloPatrocinadores = DataPages.find(page => page.id === 6)?.titleHero;
 
 const logoOrganiza = {
   id: 'uis',
   nombre: 'Universidad Industrial de Santander',
-  src: '/src/assets/organizaciones/logo_UIS.avif',
+  src: logoUIS,
   alt: 'Logo UIS'
 };
 
 const logosApoyan = [
-  { id: 1, nombre: 'Apoyo 1', src: '/src/assets/organizaciones/hdsplogo.svg', alt: 'Logo Apoyo 1' },
-  { id: 2, nombre: 'Apoyo 2', src: '/src/assets/organizaciones/gigba_logo.avif', alt: 'Logo Apoyo 2' },
-  { id: 3, nombre: 'Apoyo 3', src: '/src/assets/organizaciones/gidco.avif', alt: 'Logo Apoyo 3' },
-  { id: 4, nombre: 'Apoyo 4', src: '/src/assets/organizaciones/logo_SIGAC_2024.avif', alt: 'Logo Apoyo 4' },
+  { id: 1, nombre: 'HDSP', src: hdspLogo, alt: 'Logo HDSP' },
+  { id: 2, nombre: 'Gigba', src: gigbaLogo, alt: 'Logo Gigba' },
+  { id: 3, nombre: 'Gidco', src: gidcoLogo, alt: 'Logo Gidco' },
+  { id: 4, nombre: 'SIGAC', src: logoSIGAC, alt: 'Logo SIGAC' },
 ];
 
 const logosFinancian = [
-  { id: 1, nombre: 'Financia 1', src: '/src/assets/organizaciones/logo_minciencias.avif', alt: 'Logo Financia 1' },
-  { id: 2, nombre: 'Financia 2', src: '/src/assets/organizaciones/LOGO_ANH.avif', alt: 'Logo Financia 2' },
+  { id: 1, nombre: 'Minciencias', src: logoMinciencias, alt: 'Logo Min-ciencias' },
+  { id: 2, nombre: 'ANH', src: logoANH, alt: 'Logo ANH' },
 ];
 
 const cardData = [

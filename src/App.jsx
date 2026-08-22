@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router'
+import { HashRouter as Router, Route, Routes, useLocation } from 'react-router'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import Navbar from './components/layout/Navbar.jsx'
