@@ -1,0 +1,34 @@
+.evenz-pageheader .evenz-bgimg {
+  filter: none !important;
+}
+
+.qt-socicon-wordpress:before {
+    content: "\1F310"!important;
+}
+
+.evenz-cards__content__c {
+    text-shadow: 0px 1px 8px #5c5a5a !important;
+}
+
+
+
+
+
+.evenz-pageheader__contents {
+    background: none!important;
+}
+
+.evenz-pageheader {
+    text-shadow: 0px 1px 10px black!important;
+}
+
+.evenz-primary {
+    text-shadow: 0px 1px 10px black!important;
+}
+
+.evenz-pageheader h1 {
+    text-shadow: 0px 1px 10px black!important;
+}
+
+
+

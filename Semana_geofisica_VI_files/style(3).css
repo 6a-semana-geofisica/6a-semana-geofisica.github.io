@@ -1,0 +1,531 @@
+/*
+ Theme Name:   Evenz Child
+ Theme URI:    https://qantumthemes.com/
+ Description:  The child theme allows easier customizations and template overrides
+ Author:       QantumThemes
+ Author URI:   https://qantumthemes.com/helpdesk
+ Template:     evenz
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         right-sidebar
+ Text Domain:  evenz-child
+*/
+
+/***************************************************************
+****************************************************************
+************* PUT YOUR CUSTOM STYLES BELOW ********************/
+
+.evenz-menu__logo img {
+	max-height: 90px;
+}
+
+.vc_btn3, .evenz-btn, input[type="submit"] {
+	border-radius: 50px !important;
+}
+.evenz-tabs__menu li a {
+	border-radius: 0px !important;
+}
+
+.evenz-maincontent a:not(.evenz-btn, .vc_btn3) {
+	text-decoration: underline;
+}
+
+.evenz-menubar li a, .evenz-menu-horizontal .evenz-menubar .menu-item-has-children::after {
+	color: #fff;
+}
+
+#evenz-searchbar input[type="text"] {
+	border: 1px solid #ccc;
+}
+
+.evenz-sitename {
+	display: none;
+}
+
+#evenz-footer ul {
+text-align: center;
+}
+
+.vc_btn3.vc_btn3-color-primary, .vc_btn3.vc_btn3-color-primary.vc_btn3-style-flat {
+	background-color: #00629B;
+}
+
+.sub-menu {
+	height: calc(100vh - 146px);
+	overflow-y: auto;
+	overflow-x: visible;
+}
+
+.evenz-open .sub-menu {
+	max-height: 100vh !important;
+}
+
+#evenz-footer ul li {
+    padding-bottom: .5rem;
+}
+
+.benefits-list .evenz-btn {
+	border-color: #78be20;
+	cursor: default;
+}
+
+.benefits-list .evenz-btn::before {
+	background-color:  #78be20;
+	border-radius: 0;
+	top: 0;
+	left: 0;
+	opacity: 1;
+}
+
+.benefits-list .evenz-btn:hover::before {
+	animation: none;
+}
+
+.benefits-list .evenz-btn i {
+	color: #fff;
+}
+
+@media only screen and (min-width:320px){
+.evenz-post.place .evenz-bgimg img,
+	.evenz-post__event .evenz-bgimg img,
+.evenz-post__testimonial .evenz-bgimg img,
+.evenz-post__member .evenz-bgimg img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+}
+@media only screen and (min-width: 600px) {
+	
+	.evenz-secondaryhead__cont {
+		padding: 0;
+	}
+	
+.evenz-menubar__secondary {
+	display: flex;	
+}
+	.evenz-menubar li {
+		margin-right: 1rem;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.mobile-menu {
+		display: none;
+	}
+	.evenz-menu-horizontal .evenz-menubar {
+		white-space: wrap !important;
+	}	
+}	
+
+@media only screen and (max-width: 768px) {
+	
+	.evenz-schedule-shortcode .evenz-tabs__menu {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+	
+	.evenz-menu__logo.evenz-right, .evenz-sitename {
+		display: none;
+	}
+	
+	.evenz-3dheader__custom h4 {
+		font-size: 16px
+	}
+	
+.evenz-3dheader {
+	min-height: 400px !important;
+}
+	
+	.logo-container.evenz-menu__cont {
+		min-height: 70px;
+	}
+	
+	.evenz-menu__logo {
+		height: 70px;
+    align-items: center;
+	}
+	
+	.evenz-menu__logo img {
+		max-height: 75px;
+		margin-left: 5px;
+	}
+	
+	.logo-container-flex {
+		align-items: center;
+		display: flex;
+		min-height: 70px;
+	}
+	
+	.mobile-menu a.evenz-btn.evenz-btn__r {
+		margin-top: 5px;
+		margin-right: 10px;
+	}
+	
+	.evenz-3dheader {
+    height: calc(100vh - 70px) !important;
+  }
+	
+	#evenz-headerbar-content, #evenz-headerbar {
+		position: relative;
+	}
+	
+	.evenz-section-caption.evenz-section-caption--l {
+		border: none;
+		background-color: transparent !important;
+		padding: 0px;
+		margin-top: -18%;
+	}
+	
+	.site-title {
+		padding-left: 10px;
+		font-size: 12px;
+	}
+	
+	.site-title a {
+		font-size: clamp(2vw, 20px, 4vw) !important;
+	}
+	
+	.vc_custom_1716133100093 {
+		text-align: center !important;
+	}
+	
+	.evenz-pageheader__contents {
+		padding: 140px 0;
+	}
+	
+	.home-countdown > div {
+		display: flex;
+		justify-content: center;		
+	}
+	
+	#evenz-body .vc_row.evenz-vc_row.vc_column-gap-30 .evenz-rowcontent {
+		margin: 0;
+	}
+	
+}
+
+@media only screen and (min-width: 1200px) {
+	
+	.evenz-section {
+  	padding: 75px 0 115px 0;
+  }
+	
+	.evenz-secondaryhead__cont {
+		padding: 8px 27px; 
+	}
+	.evenz-menu-horizontal .evenz-menubar > li ul {
+		width: 380px;
+		overflow: visible;
+	}
+	.evenz-menu-horizontal .evenz-menubar > li.evenz-iright > ul li > ul {
+		left: -380px;
+	}
+
+	.evenz-menubar .menu-item a {
+		font-size: 15px;
+	}
+	
+	.evenz-menu-horizontal .evenz-menubar > li {
+		margin: 0 0.5rem;
+	}
+	
+	.evenz-menu-horizontal .evenz-menubar > li ul li > ul {
+		left: 380px;
+	}
+	
+	.evenz-menu__logo {
+		max-width: 400px;
+	}
+	
+	.evenz-menu__logo img {
+		max-height: 90px
+	}
+
+	.evenz-searchbar, .evenz-searchbar.open {
+		top: 44px;
+	}
+	
+	.evenz-menu-horizontal .evenz-menubar li:hover > ul {
+		top: 17px;		
+	}
+	
+}
+
+.vc_custom_1567171809119 {
+	/*display: none !important;*/
+}
+
+.evenz-footer__copy p {
+	text-align: center;
+	padding: 0;
+	font-size: 12px;
+}
+
+.evenz-footer__copy .evenz-menubar {
+	float: none;
+	display: inline-block;
+	padding: 0 0 10px 0;
+}
+#evenz-copybar > .evenz-container {
+	display: flex;    
+	flex-direction: column-reverse;
+  align-items: center;
+	max-width: 100%;
+}
+
+.evenz-schedule__item__head__bg img {
+	filter: brightness(0.85);
+}
+
+.evenz-post__member .evenz-post__header .evenz-bgimg, .evenz-post__member .evenz-post__header .evenz-bgimg:hover {
+	filter: none;
+}
+
+.evenz-post:hover .evenz-hov {
+	opacity: 0;
+}
+
+.evenz-3dheader {
+	height: 75vh;
+	min-height: 700px;
+}
+
+.evenz-menubar.evenz-menubar__secondary {
+	letter-spacing: normal !important;
+	line-height: 28px;
+}
+
+.evenz-menubar.evenz-menubar__secondary .menu-item a {
+	font-size: 12px;
+	text-transform: none;
+	line-height: auto !important;
+	font-weight: 400 !important;
+}
+
+a.evenz-btn.evenz-btn__r {
+	color: #fff;
+	height: 30px;
+  width: 32px;
+  margin-top: 8px;
+  border-width: 1px;
+  border-radius: 4px;
+	min-height: 30px;
+	min-width: 32px;
+}
+
+#qt-megafooter a.evenz-btn.evenz-btn__r:hover {
+	border-color: #fff;
+	background: #fff !important;
+	color: #fff;
+}
+
+#qt-megafooter .evenz-btn:hover::before #qt-megafooter .evenz-btn:hover::after {
+	display: none !important;
+	animation: none !important;
+	animation-play-state: none !important;
+	background-color: none v;
+	visibility: hidden !important;
+}
+
+.evenz-3dheader__bg img {
+	filter: brightness(0.6);
+}
+
+.evenz-3dheader__firstlevel .evenz-caption.evenz-gradtext {
+	font-size: 18px;
+	background-color: #fff;
+}
+
+.evenz-herolist .evenz-btn {
+	margin-top: 1px;
+	margin-bottom: 1px;
+  float: left;
+}
+
+.vc_general.vc_cta3.vc_cta3-color-blue.vc_cta3-style-outline .vc_cta3-content-header, .vc_btn3.vc_btn3-color-blue.vc_btn3-style-outline {
+	  color: #00629b;
+}
+
+.vc_general.vc_cta3.vc_cta3-color-blue.vc_cta3-style-outline, .vc_btn3.vc_btn3-color-blue.vc_btn3-style-outline {
+	    border-color: #00629b;
+}
+
+#evenz-body #conference .evenz-bgimg__vc img {
+	filter: blur(8px);
+}
+
+#qt-megafooter a.evenz-btn.evenz-btn__r {
+	color: #002855
+}
+
+#evenz-footer .evenz-menubar li a, .evenz-footer__copy p {
+	text-transform: none;
+}
+
+.evenz-menubar > li:hover > a > span {
+	color: #fff !important;
+}
+
+.evenz-bgimg {
+	background-color: #00629B;
+}
+
+.evenz-btn.evenz-btn__white {
+	color: #002855;
+}
+
+.evenz-btn.evenz-btn__white:hover {
+	color: #fff;
+}
+
+.evenz-p-catz:hover > a {
+	color: #fff;
+	cursor: none;
+}
+
+.single-evenz_member .evenz-bgimg {
+	background-color: #bed4e9;
+}
+
+.single-evenz_member .evenz-pageheader__thumb {
+	visibility: hidden;
+}
+
+.single-evenz_member .evenz-bgimg img {
+	object-fit: contain;
+}
+
+body h1,body h2,body h3,body h4, body h5, body h6, body  evenz-schedule__item__time, body .evenz-caption, body .evenz-capfont, body .evenz-pagecaption {
+	letter-spacing: initial;
+}
+
+body .evenz-txtfx--oslo.evenz-active span {
+	padding: 0 1px;
+}
+
+.qt-megafooter__container .evenz-btn::before, .qt-megafooter__container .evenz-btn::after {
+	visibility: hidden !important;
+	color: #002855 !important;
+	background: transparent !important;
+}
+
+.qt-megafooter__container .evenz-btn {
+	color:  #002855 !important;
+	border-color:  #002855 !important;
+}
+
+p a, .menu-item a {
+	color: #00629B;
+}
+
+p a:hover,  .menu-item a:hover {
+	color: #002855;
+}
+
+.fee-table table tr:first-child td {
+background-color: #002855;
+color: #fff;
+border: none;
+	vertical-align: top;
+}
+
+.fee-table table {
+	margin: 2rem 0;
+	min-width: 600px;
+}
+
+.fee-table > .wpb_wrapper, .wpb_wrapper  .col {
+	overflow-x: auto;
+}
+
+.fee-table table td {
+border-right: 1px solid #ccc;
+border-right-width: 1px;
+padding-left: 8px;
+}
+
+.fee-table table td:last-child {
+border-right: none;
+}
+
+.fee-table table tr:nth-child(even) td {
+	background-color: #fafafa;
+}
+
+body .vc_tta-color-blue.vc_tta-style-outline .vc_tta-panel .vc_tta-panel-heading {
+border-color: #00629b;
+	color:  #00629b;
+}
+body .vc_tta-color-blue.vc_tta-style-outline .vc_tta-panel .vc_tta-panel-heading:focus, body  .vc_tta-color-blue.vc_tta-style-outline .vc_tta-panel .vc_tta-panel-heading:hover {
+	background-color: #00629b;
+	color: #fff;
+}
+body .vc_tta-color-blue.vc_tta-style-outline .vc_tta-panel .vc_tta-panel-title>a, body .vc_tta-color-blue.vc_tta-style-outline .vc_tta-panel.vc_active .vc_tta-panel-title>a {
+	color:  #00629b;
+}
+
+body .vc_tta-color-blue.vc_tta-style-outline .vc_tta-panel.vc_active .vc_tta-panel-heading:focus, body .vc_tta-color-blue.vc_tta-style-outline .vc_tta-panel.vc_active .vc_tta-panel-heading:hover {
+	background-color: transparent;
+	border-color: #00629b;
+}
+
+.vc_tta-panel.vc_active .vc_tta-panel-heading {
+	border-bottom: none !important;
+	border-color: #00629b;
+}
+
+.evenz-3dheader__contents, .evenz-3dheader__bg {
+    transform: none !important;
+}
+.evenz-sitename.evenz-logo_header {
+display: none;
+}
+
+/* Remove underline from website link icons */
+.qt-socicon-wordpress {
+    text-decoration: none !important;
+}
+
+/* Ensure parent link also has no underline */
+a .qt-socicon-wordpress {
+    text-decoration: none !important;
+}
+
+/* Remove underline from link containing the icon */
+a:has(.qt-socicon-wordpress) {
+    text-decoration: none !important;
+}
+
+/* Alternative: Target the link state specifically */
+.qt-socicon-wordpress,
+.qt-socicon-wordpress:link,
+.qt-socicon-wordpress:visited {
+    text-decoration: none !important;
+}
+
+/* Ensure no underline on hover either */
+.qt-socicon-wordpress:hover,
+a:hover .qt-socicon-wordpress {
+    text-decoration: none !important;
+}
+
+html {
+    scroll-padding-top: 120px;
+}
+
+#FAQ::before,
+#preparation::before,
+#submission-and-review::before,
+#list-of-edics::before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+}

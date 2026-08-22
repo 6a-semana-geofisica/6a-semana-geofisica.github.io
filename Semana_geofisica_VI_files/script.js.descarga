@@ -1,0 +1,14 @@
+(function (w) {
+    
+        
+    if (typeof w.feathr === 'function') {
+        w.feathr('integrate', 'ttd', '698ce0f4bef0c90002a6a3b7');
+    }
+        
+        
+    if (typeof w.feathr === 'function') {
+        w.feathr('match', '698ce0f4bef0c90002a6a3b7');
+    }
+        
+    
+}(window));
