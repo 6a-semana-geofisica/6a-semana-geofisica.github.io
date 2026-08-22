@@ -60,9 +60,8 @@ const Resumenes = () => {
         </Button>
         <Button
           className="w-full sm:w-auto border sm:ml-12 border-white/20 bg-gradient-to-br from-white/10 to-white/5 shadow-none backdrop-blur-sm hover:border-gold-400 hover:text-gold-400"
-          onClick={() => console.log('Ver noticias')}
         >
-          NOTICIAS Y ACTUALIZACIONES
+          <a href="https://www.instagram.com/semana_geofisica/" target="_blank" rel="noopener noreferrer">NOTICIAS Y ACTUALIZACIONES</a>
         </Button>
       </Hero>
 

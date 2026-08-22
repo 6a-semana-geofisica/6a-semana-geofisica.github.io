@@ -1,15 +1,10 @@
 import { motion } from 'framer-motion';
-import { useMagnetic } from '../../hooks/useMagnetic.js';
 
 const Button = ({ children, onClick, className = '', type = 'button', ...props }) => {
-  const { x, y, handlers } = useMagnetic(0.15);
-
   return (
     <motion.button
       type={type}
       onClick={onClick}
-      style={{ x, y }}
-      {...handlers}
       className={`
         inline-flex items-center justify-center
         px-8 py-3.5 rounded-[50px]

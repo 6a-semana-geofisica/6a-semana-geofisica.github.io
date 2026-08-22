@@ -53,9 +53,8 @@ const Vgeofisica = () => {
         </Button>
         <Button
           className="sm:ml-12 w-full border border-white/20 bg-gradient-to-br from-white/10 to-white/5 shadow-none backdrop-blur-sm hover:border-gold-400 hover:text-gold-400 sm:w-auto"
-          onClick={() => console.log('Ver noticias')}
         >
-          NOTICIAS Y ACTUALIZACIONES
+          <a href="https://www.instagram.com/semana_geofisica/" target="_blank" rel="noopener noreferrer">NOTICIAS Y ACTUALIZACIONES</a>
         </Button>
       </Hero>
 

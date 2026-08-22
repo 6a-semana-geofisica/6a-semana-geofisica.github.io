@@ -1,9 +1,6 @@
 import { motion } from 'framer-motion';
-import { useMagnetic } from '../../hooks/useMagnetic.js';
 
 export const AnimatedButton = ({ children, onClick, className = '', type = 'button' }) => {
-  const { x, y, handlers } = useMagnetic(0.2);
-
   return (
     <>
       <style>
@@ -30,8 +27,6 @@ export const AnimatedButton = ({ children, onClick, className = '', type = 'butt
       <motion.button
         type={type}
         onClick={onClick}
-        style={{ x, y }}
-        {...handlers}
         className={`group btn-31-effect relative overflow-hidden border border-gold-500/50 bg-brand-950 px-8 py-3.5 font-['Montserrat'] text-sm font-bold uppercase tracking-widest text-white transition-all md:text-base ${className}`}
       >
         <div className="clip-bg absolute inset-0 bg-gradient-to-br from-gold-400 to-gold-600" />
