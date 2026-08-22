@@ -1,6 +1,0 @@
-(function($) {
-	"use strict";
-	
-	$('.evenz-p-catz > a').removeAttr("href");
-	
-})(jQuery);
