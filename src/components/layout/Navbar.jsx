@@ -121,22 +121,20 @@ const Navbar = () => {
           className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-gold-400/20 blur-3xl"
           aria-hidden="true"
         />
-        <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-6 sm:px-6 lg:px-8 lg:py-10">
+        <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:gap-6 sm:px-6 sm:py-6 lg:px-8 lg:py-10">
           <Link
             to="/"
-            className="flex items-center gap-4 sm:gap-6"
+            className="flex items-center gap-3 sm:gap-6"
             aria-label="Ir a Inicio"
           >
-            <Logo className="h-20 w-20 rounded-2xl sm:h-28 sm:w-28" />
-            <span className="flex flex-col gap-1.5">
-              {/* Aplicado Montserrat Semibold al título principal */}
-              <span className="font-['Montserrat'] text-2xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem]">
+            <Logo className="h-14 w-14 shrink-0 rounded-xl sm:h-28 sm:w-28 sm:rounded-2xl" />
+            <span className="flex flex-col gap-1 sm:gap-1.5">
+              <span className="font-['Montserrat'] text-base font-semibold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem]">
                 VI Semana de la Geofísica
               </span>
-              {/* Aplicado Montserrat Semibold al subtítulo de fecha */}
-              <span className="flex items-center gap-2 text-lg font-['Montserrat'] font-semibold text-gold-600 sm:text-xl">
+              <span className="flex items-center gap-1.5 text-xs font-['Montserrat'] font-semibold text-gold-600 sm:gap-2 sm:text-xl">
                 <svg
-                  className="h-4 w-4 sm:h-5 sm:w-5"
+                  className="h-4 w-4 shrink-0 sm:h-5 sm:w-5"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -148,11 +146,12 @@ const Navbar = () => {
                   <rect x="3" y="4" width="18" height="17" rx="2" />
                   <path d="M8 2v4M16 2v4M3 9h18" />
                 </svg>
-                03 - 07 Noviembre 2026, Bucaramanga - Santander
+                <span className="hidden sm:inline">03 - 07 Noviembre 2026, Bucaramanga - Santander</span>
+                <span className="sm:hidden">03 - 07 Nov 2026</span>
               </span>
             </span>
           </Link>
-          <Logo className="hidden h-24 w-24 rounded-2xl sm:flex lg:h-32 lg:w-32" />
+          <Logo className="hidden h-24 w-24 shrink-0 rounded-2xl sm:flex lg:h-32 lg:w-32" />
         </div>
       </header>
 

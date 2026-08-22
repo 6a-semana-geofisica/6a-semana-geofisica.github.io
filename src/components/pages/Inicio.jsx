@@ -30,7 +30,7 @@ const Inicio = () => {
   const tituloInicio = DataPages.find(page => page.id === 1)?.titleHero || "VI Semana de la Geofísica";
 
   // Filtramos la data de los miembros del equipo
-  const comiteOrganizador = teamMembers.filter(m => m.comite === "Comité Organizador");
+  const comiteOrganizador = teamMembers.filter(m => m.comite === "Comite Organizador");
   const comiteApoyo = teamMembers.filter(m => m.comite === "Comite de Apoyo");
   
   // Agrupamos el Científico y Administrativo
@@ -56,7 +56,7 @@ const Inicio = () => {
             className="w-full sm:w-auto sm:mr-12"
             onClick={() => console.log('Ir a subir resumen')}
           >
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhq-i8Raa3W6W2wPUhHqbriF4j08ck63dccxAKLYcZuP8PjQ/viewform">SUBE TU RESUMEN</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhq-i8Raa3W6W2wPUhHqbriF4j08ck63dccxAKLYcZuP8PjQ/viewform" target="_blank" rel="noopener noreferrer">SUBE TU RESUMEN</a>
           </Button>
 
             <Button 
@@ -70,32 +70,7 @@ const Inicio = () => {
       {/* Sección de información y descripción del evento */}
       <AcercaDelEvento />
 
-      {/* Stats Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-brand-950 via-brand-900 to-brand-800 px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-        <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-            {stats.map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.5, delay: i * 0.1, ease: [0.23, 1, 0.32, 1] }}
-                className="flex flex-col items-center text-center"
-              >
-                <span className="font-['Montserrat'] text-4xl font-black text-gold-400 sm:text-5xl">
-                  <AnimatedCounter from={0} to={stat.value} suffix={stat.suffix} duration={2} />
-                </span>
-                <span className="mt-2 font-['Montserrat'] text-sm font-semibold tracking-wider text-slate-400 uppercase">
-                  {stat.label}
-                </span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECCIÓN: Equipo de Trabajo */}
+      {/* Equipo de Trabajo */}
       <section className="bg-slate-50/50 px-4 py-16 sm:px-6 md:py-24 lg:px-8">
         <div className="mx-auto max-w-[1300px]"> 
           
@@ -149,11 +124,8 @@ const Inicio = () => {
                   <Card 
                     name={miembro.name}
                     role={miembro.comite}
-                    avatarImg={miembro.imagen} 
-                    btnText1={miembro.linkedin ? "LinkedIn" : "Perfil"}
-                    btnText2="Contacto"
+                    avatarImg={miembro.imagen}
                     onBtn1Click={() => abrirLinkedIn(miembro.linkedin)}
-                    onBtn2Click={() => console.log(`Contactar a ${miembro.name}`)}
                   />
                 </motion.div>
               ))}
@@ -184,10 +156,7 @@ const Inicio = () => {
                     name={miembro.name}
                     role={miembro.comite}
                     avatarImg={miembro.imagen}
-                    btnText1={miembro.linkedin ? "LinkedIn" : "Perfil"}
-                    btnText2="Contacto"
                     onBtn1Click={() => abrirLinkedIn(miembro.linkedin)}
-                    onBtn2Click={() => console.log(`Contactar a ${miembro.name}`)}
                   />
                 </motion.div>
               ))}
@@ -218,10 +187,7 @@ const Inicio = () => {
                     name={miembro.name}
                     role={miembro.comite} 
                     avatarImg={miembro.imagen}
-                    btnText1={miembro.linkedin ? "LinkedIn" : "Perfil"}
-                    btnText2="Contacto"
                     onBtn1Click={() => abrirLinkedIn(miembro.linkedin)}
-                    onBtn2Click={() => console.log(`Contactar a ${miembro.name}`)}
                   />
                 </motion.div>
               ))}

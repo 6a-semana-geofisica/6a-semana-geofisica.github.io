@@ -48,7 +48,7 @@ const VideoHero = () => {
             {/* Contenedor del video */}
             <div className="relative rounded-xl sm:rounded-[2.2rem] overflow-hidden bg-black shadow-inner">
                 <iframe
-                src="https://www.youtube.com/embed/ptc4Awb0UpU"
+                src="https://youtu.be/fOW8Y09GVek?si=RJo_miwNv6bcCh_e"
                 title="Video final"
                 className="w-full aspect-[16/9]"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -56,7 +56,7 @@ const Hero = ({ titulo = "VI Semana de la Geofísica", children }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={dateVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
-          className="mb-4 flex items-center justify-center gap-2 font-['Montserrat'] text-xs font-semibold tracking-widest text-gold-400 sm:text-sm md:text-base lg:text-lg"
+          className="mb-4 flex items-center justify-center gap-2 font-montserrat text-xs font-semibold tracking-widest text-gold-400 sm:text-sm md:text-base lg:text-lg"
         >
           <span className="hidden h-[1px] w-8 bg-gold-400/50 md:block"></span>
           VI SEMANA DE LA GEOFÍSICA | 03 - 07 NOVIEMBRE 2026
@@ -69,7 +69,7 @@ const Hero = ({ titulo = "VI Semana de la Geofísica", children }) => {
           initial={{ opacity: 0, y: 30 }}
           animate={titleVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.23, 1, 0.32, 1] }}
-          className="mb-6 max-w-4xl break-words font-['Montserrat'] text-3xl font-black leading-tight tracking-tight text-white drop-shadow-lg sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5rem]"
+          className="mb-6 max-w-4xl break-words font-montserrat text-3xl font-black leading-tight tracking-tight text-white drop-shadow-lg sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5rem]"
         >
           <TextReveal split="words" stagger={0.06} delay={0.15}>
             {restoDelTitulo}

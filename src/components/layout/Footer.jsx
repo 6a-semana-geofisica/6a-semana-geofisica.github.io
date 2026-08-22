@@ -24,7 +24,7 @@ const Footer = () => {
         <p className="font-['Montserrat'] text-sm text-slate-400">
           &copy; 2026{' '}
           <span className="font-semibold text-slate-300">
-            6a Semana de la Geof&iacute;sica
+            VI Semana de la Geof&iacute;sica
           </span>{' '}
           &mdash; Universidad Industrial de Santander
         </p>
