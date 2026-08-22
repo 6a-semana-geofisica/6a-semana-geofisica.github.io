@@ -8,7 +8,7 @@ const VideoHero = () => {
   const [videoRef, videoVisible] = useScrollReveal({ margin: '-100px' });
 
   return (
-    <section className="relative py-16">
+    <section className="relative py-16 px-4">
       <ParallaxOrb className="opacity-50" />
 
       <motion.div className="max-w-6xl mx-auto mb-16">
@@ -17,7 +17,7 @@ const VideoHero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={titleVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
-          className="mb-3 font-['Montserrat'] text-2xl font-bold tracking-widest text-center text-slate-900 sm:text-2xl"
+          className="mb-3 font-['Montserrat'] text-lg font-bold tracking-wide text-center text-slate-900 sm:text-xl sm:tracking-widest md:text-2xl"
         >
           <TextReveal split="words" stagger={0.05}>
             Cónoce más sobre el Proyecto 8091 de Minciencias
@@ -35,18 +35,18 @@ const VideoHero = () => {
           <motion.div
             animate={{ opacity: [0.15, 0.3, 0.15] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 via-gold-500 to-amber-500/20 rounded-[3rem] blur-2xl"
+            className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 via-gold-500 to-amber-500/20 rounded-xl sm:rounded-[3rem] blur-2xl"
           />
 
           {/* Marco exterior con gradiente */}
-          <div className="relative p-[3px] rounded-[2.8rem] bg-gradient-to-br from-gold-500 via-blue-500/20 to-amber-300/60 shadow-[0_0_60px_rgba(255,100,150,0.08)]">
+          <div className="relative p-[3px] rounded-xl sm:rounded-[2.8rem] bg-gradient-to-br from-gold-500 via-blue-500/20 to-amber-300/60 shadow-[0_0_60px_rgba(255,100,150,0.08)]">
             
             {/* Marco interior blanco */}
-            <div className="bg-gradient-to-br from-white/95 to-rose-50/95 rounded-[2.6rem] p-3 shadow-xl">
+            <div className="bg-gradient-to-br from-white/95 to-rose-50/95 rounded-xl sm:rounded-[2.6rem] p-3 shadow-xl">
             
 
             {/* Contenedor del video */}
-            <div className="relative rounded-[2.2rem] overflow-hidden bg-black shadow-inner">
+            <div className="relative rounded-xl sm:rounded-[2.2rem] overflow-hidden bg-black shadow-inner">
                 <iframe
                 src="https://www.youtube.com/embed/ptc4Awb0UpU"
                 title="Video final"

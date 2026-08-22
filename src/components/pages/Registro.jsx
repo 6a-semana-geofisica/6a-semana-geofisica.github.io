@@ -41,8 +41,8 @@ const Registro = () => {
         <section className="bg-slate-50/50 px-4 py-16 sm:px-6 md:py-24 lg:px-8">
           <div className="mx-auto max-w-7xl">
 
-            <div className="mb-20 flex items-center justify-center gap-4">
-              <h3 className="text-center font-['Montserrat'] italic tracking-widest text-slate-900 sm:text-2xl">
+            <div className="mb-8 flex items-center justify-center gap-4 sm:mb-20">
+              <h3 className="text-center font-['Montserrat'] text-sm italic tracking-wide text-slate-900 sm:text-base sm:tracking-widest lg:text-2xl">
                 "Lo importante es no dejar de cuestionar". (Albert Einstein) 
               </h3>
             </div>
@@ -50,7 +50,7 @@ const Registro = () => {
             {/* Título con separadores laterales */}
             <div className="mb-10 flex items-center justify-center gap-4">
               <div className="h-[2px] w-16 bg-gradient-to-r from-transparent to-gold-400 sm:w-32"></div>
-              <h2 className="text-center font-['Montserrat'] text-2xl font-bold uppercase tracking-widest text-slate-900 sm:text-3xl">
+              <h2 className="text-center font-['Montserrat'] text-lg font-bold uppercase tracking-wide text-slate-900 break-words sm:text-2xl sm:tracking-widest md:text-3xl">
                 VI Semana de la Geofísica
               </h2>
               <div className="h-[2px] w-16 bg-gradient-to-l from-transparent to-gold-400 sm:w-32"></div>

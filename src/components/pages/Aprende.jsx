@@ -46,9 +46,9 @@ const Aprende = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={quoteVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
-            className="mb-20 flex items-center justify-center gap-4"
+            className="mb-8 flex items-center justify-center gap-4 sm:mb-20"
           >
-            <TextReveal split="words" stagger={0.05} className="text-center font-['Montserrat'] italic tracking-widest text-slate-900 sm:text-2xl">
+            <TextReveal split="words" stagger={0.05} className="text-center font-['Montserrat'] text-sm italic tracking-wide text-slate-900 sm:text-base sm:tracking-widest lg:text-2xl">
               "Lo importante es no dejar de cuestionar". (Albert Einstein)
             </TextReveal>
           </motion.div>
@@ -61,7 +61,7 @@ const Aprende = () => {
             className="mb-10 flex items-center justify-center gap-4"
           >
             <div className="h-[2px] w-16 bg-gradient-to-r from-transparent to-gold-400 sm:w-32" />
-            <TextReveal split="words" stagger={0.08} className="text-center font-['Montserrat'] text-2xl font-bold uppercase tracking-widest text-slate-900 sm:text-3xl">
+            <TextReveal split="words" stagger={0.08} className="text-center font-['Montserrat'] text-lg font-bold uppercase tracking-wide text-slate-900 break-words sm:text-2xl sm:tracking-widest md:text-3xl">
               Acceso al repositorio!
             </TextReveal>
             <div className="h-[2px] w-16 bg-gradient-to-l from-transparent to-gold-400 sm:w-32" />

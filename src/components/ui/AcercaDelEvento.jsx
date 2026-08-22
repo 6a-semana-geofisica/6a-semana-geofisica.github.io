@@ -52,9 +52,9 @@ const AcercaDelEvento = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={quoteVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
-          className="mb-20 flex items-center justify-center gap-4"
+          className="mb-8 flex items-center justify-center gap-4 sm:mb-20"
         >
-          <h3 className="text-center font-['Montserrat'] italic tracking-widest text-slate-900 sm:text-2xl">
+          <h3 className="text-center font-['Montserrat'] text-sm italic tracking-wide text-slate-900 sm:text-base sm:tracking-widest lg:text-2xl">
             &ldquo;Lo importante es no dejar de cuestionar&rdquo;. (Albert Einstein)
           </h3>
         </motion.div>
