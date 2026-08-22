@@ -25,7 +25,7 @@ const Hero = ({ titulo = "VI Semana de la Geofísica", children }) => {
   const [buttonsRef, buttonsVisible] = useScrollReveal({ margin: '0px' });
 
   return (
-    <section className="relative flex min-h-[90vh] w-full items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-[70vh] w-full items-center justify-center overflow-hidden sm:min-h-[90vh]">
       {/* Floating geometric shapes */}
       <FloatingShapes />
 
@@ -35,24 +35,19 @@ const Hero = ({ titulo = "VI Semana de la Geofísica", children }) => {
       {/* Imagen de fondo con parallax */}
       <motion.div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url(${Fondo})`,
-          transform: bgY,
-        }}
+        style={{ backgroundImage: `url(${Fondo})` }}
         animate={{ y: bgY }}
       />
 
       {/* Capa Oscura con opacity animada */}
       <motion.div
         className="absolute inset-0 bg-brand-950/40 bg-gradient-to-t from-brand-950 via-brand-900/30 to-transparent"
-        style={{ opacity: overlayOpacity }}
         animate={{ opacity: overlayOpacity }}
       />
 
       {/* Contenido */}
       <motion.div
         className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center justify-center px-4 text-center sm:px-6 lg:px-8"
-        style={{ transform: contentY }}
         animate={{ y: contentY }}
       >
         {/* Fechas / Etiqueta superior */}
@@ -61,7 +56,7 @@ const Hero = ({ titulo = "VI Semana de la Geofísica", children }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={dateVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
-          className="mb-4 flex items-center justify-center gap-2 font-['Montserrat'] text-sm font-semibold tracking-widest text-gold-400 sm:text-base md:text-lg"
+          className="mb-4 flex items-center justify-center gap-2 font-['Montserrat'] text-xs font-semibold tracking-widest text-gold-400 sm:text-sm md:text-base lg:text-lg"
         >
           <span className="hidden h-[1px] w-8 bg-gold-400/50 md:block"></span>
           VI SEMANA DE LA GEOFÍSICA | 03 - 07 NOVIEMBRE 2026
@@ -74,7 +69,7 @@ const Hero = ({ titulo = "VI Semana de la Geofísica", children }) => {
           initial={{ opacity: 0, y: 30 }}
           animate={titleVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.23, 1, 0.32, 1] }}
-          className="mb-6 max-w-4xl font-['Montserrat'] text-5xl font-black leading-tight tracking-tight text-white drop-shadow-lg sm:text-6xl md:text-7xl lg:text-[5rem]"
+          className="mb-6 max-w-4xl break-words font-['Montserrat'] text-3xl font-black leading-tight tracking-tight text-white drop-shadow-lg sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5rem]"
         >
           <TextReveal split="words" stagger={0.06} delay={0.15}>
             {restoDelTitulo}

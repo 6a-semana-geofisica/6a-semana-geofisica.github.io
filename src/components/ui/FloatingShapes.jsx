@@ -1,8 +1,8 @@
-import { useMemo } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useReducedMotion } from '../../hooks/useReducedMotion.js';
 
-const shapes = [
+const allShapes = [
   { type: 'hexagon', size: 40, x: '8%', y: '15%', delay: 0, duration: 18, opacity: 0.07 },
   { type: 'circle', size: 24, x: '85%', y: '20%', delay: 2, duration: 22, opacity: 0.06 },
   { type: 'diamond', size: 20, x: '75%', y: '70%', delay: 4, duration: 16, opacity: 0.05 },
@@ -18,23 +18,13 @@ const renderShape = (type, size) => {
     case 'hexagon':
       return (
         <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
-          <polygon
-            points="50,2 93,25 93,75 50,98 7,75 7,25"
-            stroke="currentColor"
-            strokeWidth="2"
-            fill="none"
-          />
+          <polygon points="50,2 93,25 93,75 50,98 7,75 7,25" stroke="currentColor" strokeWidth="2" fill="none" />
         </svg>
       );
     case 'diamond':
       return (
         <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
-          <polygon
-            points="50,5 95,50 50,95 5,50"
-            stroke="currentColor"
-            strokeWidth="2"
-            fill="none"
-          />
+          <polygon points="50,5 95,50 50,95 5,50" stroke="currentColor" strokeWidth="2" fill="none" />
         </svg>
       );
     case 'line':
@@ -45,16 +35,27 @@ const renderShape = (type, size) => {
       );
     default:
       return (
-        <div
-          style={{ width: size, height: size }}
-          className="rounded-full border border-current"
-        />
+        <div style={{ width: size, height: size }} className="rounded-full border border-current" />
       );
   }
 };
 
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 640);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+  return isMobile;
+};
+
 const FloatingShapes = ({ className = '' }) => {
   const reducedMotion = useReducedMotion();
+  const isMobile = useIsMobile();
+
+  const shapes = useMemo(() => (isMobile ? allShapes.slice(0, 4) : allShapes), [isMobile]);
 
   const renderedShapes = useMemo(
     () =>
@@ -66,10 +67,7 @@ const FloatingShapes = ({ className = '' }) => {
           animate={
             reducedMotion
               ? {}
-              : {
-                  y: [0, -15, 8, -5, 0],
-                  rotate: [0, 3, -2, 1, 0],
-                }
+              : { y: [0, -15, 8, -5, 0], rotate: [0, 3, -2, 1, 0] }
           }
           transition={{
             duration: shape.duration,
@@ -81,7 +79,7 @@ const FloatingShapes = ({ className = '' }) => {
           {renderShape(shape.type, shape.size)}
         </motion.div>
       )),
-    [reducedMotion, className]
+    [shapes, reducedMotion, className]
   );
 
   if (reducedMotion) return null;

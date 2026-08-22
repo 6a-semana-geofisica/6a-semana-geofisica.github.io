@@ -9,7 +9,7 @@ export default function ScrollProgress({ className = '' }) {
   if (reducedMotion) return null;
 
   return (
-    <div className={`fixed top-0 left-0 z-50 h-1 ${className}`} style={{ width: '100%' }}>
+    <div className={`fixed top-0 left-0 z-[40] h-1 ${className}`} style={{ width: '100%' }}>
       {/* Glow layer */}
       <motion.div
         className="absolute inset-0 h-1 bg-gradient-to-r from-gold-400 to-brand-600 opacity-60 blur-sm"

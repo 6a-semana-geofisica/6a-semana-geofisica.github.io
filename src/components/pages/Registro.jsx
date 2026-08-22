@@ -22,14 +22,14 @@ const Registro = () => {
         <Hero titulo={tituloRegistro}>
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
             <Button
-              className="w-full sm:w-auto mr-12"
+              className="w-full sm:w-auto sm:mr-12"
               onClick={() => console.log('Ir a subir resumen')}
             >
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhq-i8Raa3W6W2wPUhHqbriF4j08ck63dccxAKLYcZuP8PjQ/viewform">SUBE TU RESUMEN</a>
             </Button>
 
             <Button 
-                className="w-full sm:w-auto border ml-12 border-white/20 bg-gradient-to-br from-white/10 to-white/5 shadow-none backdrop-blur-sm hover:border-gold-400 hover:text-gold-400"
+                className="w-full sm:w-auto border sm:ml-12 border-white/20 bg-gradient-to-br from-white/10 to-white/5 shadow-none backdrop-blur-sm hover:border-gold-400 hover:text-gold-400"
                 onClick={() => console.log('Ver noticias')}
             >
                 NOTICIAS Y ACTUALIZACIONES
@@ -42,7 +42,7 @@ const Registro = () => {
           <div className="mx-auto max-w-7xl">
 
             <div className="mb-20 flex items-center justify-center gap-4">
-              <h3 className="text-center  front-['Montserrat'] italic tracking-widest text-slate-900 sm:text-2xl">
+              <h3 className="text-center font-['Montserrat'] italic tracking-widest text-slate-900 sm:text-2xl">
                 "Lo importante es no dejar de cuestionar". (Albert Einstein) 
               </h3>
             </div>
@@ -119,7 +119,7 @@ const Registro = () => {
               {/* COLUMNA IZQUIERDA: Textos e Información */}
               <div className="flex flex-col lg:col-span-7">
                 <h2 className="mb-6 font-['Montserrat'] text-3xl font-black uppercase tracking-tight text-slate-900 sm:text-4xl">
-                  Registra tu asistencia a la <span className="bg-gradient-to-r from-gold-400 to-brand-600 bg-clip-text text-transparent"><br/>VI Semana de la Geofísica</span>
+                  Registra tu asistencia a la <span className="bg-gradient-to-r from-gold-400 to-brand-600 bg-clip-text text-transparent">VI Semana de la Geofísica</span>
                 </h2>
                 
                 <p className="mb-4 font-['Montserrat'] text-base leading-relaxed text-slate-600">

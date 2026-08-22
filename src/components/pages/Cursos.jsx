@@ -25,11 +25,11 @@ const Cursos = () => {
   return (
     <div>
       <Hero titulo={tituloCursos}>
-        <Button className="w-full sm:w-auto mr-12" onClick={() => console.log('Ir a subir resumen')}>
+        <Button className="w-full sm:w-auto sm:mr-12" onClick={() => console.log('Ir a subir resumen')}>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhq-i8Raa3W6W2wPUhHqbriF4j08ck63dccxAKLYcZuP8PjQ/viewform">SUBE TU RESUMEN</a>
         </Button>
         <Button
-          className="w-full sm:w-auto border ml-12 border-white/20 bg-gradient-to-br from-white/10 to-white/5 shadow-none backdrop-blur-sm hover:border-gold-400 hover:text-gold-400"
+          className="w-full sm:w-auto border sm:ml-12 border-white/20 bg-gradient-to-br from-white/10 to-white/5 shadow-none backdrop-blur-sm hover:border-gold-400 hover:text-gold-400"
           onClick={() => console.log('Ver noticias')}
         >
           <a href="https://www.instagram.com/semana_geofisica/">NOTICIAS Y ACTUALIZACIONES</a>

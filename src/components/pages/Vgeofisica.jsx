@@ -48,11 +48,11 @@ const Vgeofisica = () => {
   return (
     <div>
       <Hero titulo={tituloVgeofisica}>
-        <Button className="w-full sm:w-auto mr-12" onClick={() => console.log('Ir a subir resumen')}>
+        <Button className="w-full sm:w-auto sm:mr-12" onClick={() => console.log('Ir a subir resumen')}>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhq-i8Raa3W6W2wPUhHqbriF4j08ck63dccxAKLYcZuP8PjQ/viewform">SUBE TU RESUMEN</a>
         </Button>
         <Button
-          className="ml-12 w-full border border-white/20 bg-gradient-to-br from-white/10 to-white/5 shadow-none backdrop-blur-sm hover:border-gold-400 hover:text-gold-400 sm:w-auto"
+          className="sm:ml-12 w-full border border-white/20 bg-gradient-to-br from-white/10 to-white/5 shadow-none backdrop-blur-sm hover:border-gold-400 hover:text-gold-400 sm:w-auto"
           onClick={() => console.log('Ver noticias')}
         >
           NOTICIAS Y ACTUALIZACIONES
@@ -91,8 +91,8 @@ const Vgeofisica = () => {
             <div className="flex flex-col space-y-16 lg:col-span-7">
               <motion.div
                 ref={introRef}
-                initial={{ opacity: 0, x: -30 }}
-                animate={introVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -15 }}
+                animate={introVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -15 }}
                 transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
               >
                 <div className="mb-6 flex items-center gap-4">
@@ -116,8 +116,8 @@ const Vgeofisica = () => {
 
               <motion.div
                 ref={block1Ref}
-                initial={{ opacity: 0, x: -30 }}
-                animate={block1Visible ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -15 }}
+                animate={block1Visible ? { opacity: 1, x: 0 } : { opacity: 0, x: -15 }}
                 transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
               >
                 <div className="mb-6 flex items-center gap-4">
@@ -147,8 +147,8 @@ const Vgeofisica = () => {
 
               <motion.div
                 ref={block2Ref}
-                initial={{ opacity: 0, x: -30 }}
-                animate={block2Visible ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -15 }}
+                animate={block2Visible ? { opacity: 1, x: 0 } : { opacity: 0, x: -15 }}
                 transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
               >
                 <div className="mb-6 flex items-center gap-4">
@@ -184,8 +184,8 @@ const Vgeofisica = () => {
 
               <motion.div
                 ref={block3Ref}
-                initial={{ opacity: 0, x: -30 }}
-                animate={block3Visible ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -15 }}
+                animate={block3Visible ? { opacity: 1, x: 0 } : { opacity: 0, x: -15 }}
                 transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
               >
                 <div className="mb-6 flex items-center gap-4">

@@ -92,6 +92,15 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [menuOpen])
+
   const closeMenu = () => {
     setMenuOpen(false)
     setOpenSubmenu(null)
@@ -242,7 +251,7 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 xl:hidden ${
+          className={`fixed inset-0 z-[60] bg-black/50 transition-opacity duration-300 xl:hidden ${
             menuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
           }`}
           onClick={closeMenu}
@@ -251,7 +260,7 @@ const Navbar = () => {
 
         <aside
           id="mobile-menu"
-          className={`fixed inset-y-0 right-0 z-50 w-72 max-w-[85vw] overflow-y-auto bg-white shadow-2xl transition-transform duration-300 xl:hidden ${
+          className={`fixed inset-y-0 right-0 z-[70] w-72 max-w-[85vw] overflow-y-auto bg-white shadow-2xl transition-transform duration-300 xl:hidden ${
             menuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
           aria-label="Menú de navegación"

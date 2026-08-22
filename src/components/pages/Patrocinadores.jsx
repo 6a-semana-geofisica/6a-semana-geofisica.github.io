@@ -47,11 +47,11 @@ const Patrocinadores = () => {
   return (
     <div>
       <Hero titulo={tituloPatrocinadores}>
-        <Button className="w-full sm:w-auto mr-12" onClick={() => console.log('Ir a subir resumen')}>
+        <Button className="w-full sm:w-auto sm:mr-12" onClick={() => console.log('Ir a subir resumen')}>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhq-i8Raa3W6W2wPUhHqbriF4j08ck63dccxAKLYcZuP8PjQ/viewform">SUBE TU RESUMEN</a>
         </Button>
         <Button
-          className="w-full sm:w-auto border ml-12 border-white/20 bg-gradient-to-br from-white/10 to-white/5 shadow-none backdrop-blur-sm hover:border-gold-400 hover:text-gold-400"
+          className="w-full sm:w-auto border sm:ml-12 border-white/20 bg-gradient-to-br from-white/10 to-white/5 shadow-none backdrop-blur-sm hover:border-gold-400 hover:text-gold-400"
           onClick={() => console.log('Ver noticias')}
         >
           NOTICIAS Y ACTUALIZACIONES
@@ -114,7 +114,7 @@ const Patrocinadores = () => {
                 </h4>
                 <motion.div
                   whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-                  className="group flex h-40 w-80 cursor-pointer items-center justify-center rounded-xl p-2 opacity-60 grayscale ring-1 ring-transparent transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:shadow-lg hover:shadow-gold-500/20 hover:ring-gold-400/30"
+                  className="group flex h-32 w-60 shrink-0 cursor-pointer items-center justify-center rounded-xl p-2 opacity-60 grayscale ring-1 ring-transparent transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:shadow-lg hover:shadow-gold-500/20 hover:ring-gold-400/30 sm:h-40 sm:w-80"
                 >
                   <OptimizedImage src={logoOrganiza.src} alt={logoOrganiza.alt} className="max-h-full max-w-full" imgClassName="object-contain" priority />
                 </motion.div>

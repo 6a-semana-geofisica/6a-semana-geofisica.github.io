@@ -30,11 +30,11 @@ const Estudiantes = () => {
   return (
     <div>
       <Hero titulo={tituloEstudiantes}>
-        <Button className="w-full sm:w-auto mr-12" onClick={() => console.log('Ir a subir resumen')}>
+        <Button className="w-full sm:w-auto sm:mr-12" onClick={() => console.log('Ir a subir resumen')}>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhq-i8Raa3W6W2wPUhHqbriF4j08ck63dccxAKLYcZuP8PjQ/viewform">SUBE TU RESUMEN</a>
         </Button>
         <Button
-          className="w-full sm:w-auto border ml-12 border-white/20 bg-gradient-to-br from-white/10 to-white/5 shadow-none backdrop-blur-sm hover:border-gold-400 hover:text-gold-400"
+          className="w-full sm:w-auto border sm:ml-12 border-white/20 bg-gradient-to-br from-white/10 to-white/5 shadow-none backdrop-blur-sm hover:border-gold-400 hover:text-gold-400"
           onClick={() => document.getElementById('detalles-convocatoria').scrollIntoView({ behavior: 'smooth' })}
         >
           <a href="https://www.instagram.com/semana_geofisica/">NOTICIAS Y ACTUALIZACIONES</a>
@@ -123,8 +123,8 @@ const Estudiantes = () => {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
             <motion.div
               ref={leftRef}
-              initial={{ opacity: 0, x: -40 }}
-              animate={leftVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={leftVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
               transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
               className="flex flex-col lg:col-span-7"
             >
@@ -215,8 +215,8 @@ const Estudiantes = () => {
 
             <motion.div
               ref={rightRef}
-              initial={{ opacity: 0, x: 40 }}
-              animate={rightVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 40 }}
+              initial={{ opacity: 0, x: 20 }}
+              animate={rightVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.23, 1, 0.32, 1] }}
               className="flex flex-col gap-8 lg:col-span-5"
             >

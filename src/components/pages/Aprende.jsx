@@ -28,11 +28,11 @@ const Aprende = () => {
   return (
     <div>
       <Hero titulo={tituloAprende}>
-        <Button className="w-full sm:w-auto mr-12" onClick={() => console.log('Ir a subir resumen')}>
+        <Button className="w-full sm:w-auto sm:mr-12" onClick={() => console.log('Ir a subir resumen')}>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhq-i8Raa3W6W2wPUhHqbriF4j08ck63dccxAKLYcZuP8PjQ/viewform">SUBE TU RESUMEN</a>
         </Button>
         <Button
-          className="w-full sm:w-auto border ml-12 border-white/20 bg-gradient-to-br from-white/10 to-white/5 shadow-none backdrop-blur-sm hover:border-gold-400 hover:text-gold-400"
+          className="w-full sm:w-auto border sm:ml-12 border-white/20 bg-gradient-to-br from-white/10 to-white/5 shadow-none backdrop-blur-sm hover:border-gold-400 hover:text-gold-400"
           onClick={() => console.log('Ver noticias')}
         >
           <a href="https://www.instagram.com/semana_geofisica/">NOTICIAS Y ACTUALIZACIONES</a>
@@ -62,7 +62,7 @@ const Aprende = () => {
           >
             <div className="h-[2px] w-16 bg-gradient-to-r from-transparent to-gold-400 sm:w-32" />
             <TextReveal split="words" stagger={0.08} className="text-center font-['Montserrat'] text-2xl font-bold uppercase tracking-widest text-slate-900 sm:text-3xl">
-              Accseso al repositorio!
+              Acceso al repositorio!
             </TextReveal>
             <div className="h-[2px] w-16 bg-gradient-to-l from-transparent to-gold-400 sm:w-32" />
           </motion.div>
@@ -126,7 +126,7 @@ const Aprende = () => {
         </div>
       </section>
 
-      <div className="mb-10 flex flex-col items-center justify-center text-center">
+      <div className="mb-10 flex flex-col items-center justify-center px-4 text-center">
         <h3 className="mb-3 font-['Montserrat'] text-2xl font-bold tracking-widest text-slate-900 sm:text-2xl">
           Tutorial de Procesamiento Magnetotelúrico
         </h3>
@@ -142,13 +142,13 @@ const Aprende = () => {
         <motion.div
           animate={{ opacity: [0.15, 0.3, 0.15] }}
           transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute -inset-4 rounded-[3rem] bg-gradient-to-r from-blue-500/20 via-gold-500 to-amber-500/20 blur-2xl"
+          className="absolute -inset-4 rounded-2xl bg-gradient-to-r from-blue-500/20 via-gold-500 to-amber-500/20 blur-2xl sm:rounded-[3rem]"
         />
-        <div className="relative rounded-[2.8rem] bg-gradient-to-br from-gold-500 via-blue-500/20 to-amber-300/60 p-[3px] shadow-[0_0_60px_rgba(255,100,150,0.08)]">
-          <div className="rounded-[2.6rem] bg-gradient-to-br from-white/95 to-rose-50/95 p-3 shadow-xl">
-            <div className="relative overflow-hidden rounded-[2.2rem] bg-black shadow-inner">
+        <div className="relative rounded-2xl bg-gradient-to-br from-gold-500 via-blue-500/20 to-amber-300/60 p-[3px] shadow-[0_0_60px_rgba(255,100,150,0.08)] sm:rounded-[2.8rem]">
+          <div className="rounded-2xl bg-gradient-to-br from-white/95 to-rose-50/95 p-3 shadow-xl sm:rounded-[2.6rem]">
+            <div className="relative overflow-hidden rounded-2xl bg-black shadow-inner sm:rounded-[2.2rem]">
               <iframe
-                src="https://youtu.be/lzUhIHVW1zo?si=eKcm7V5fOigYRntj"
+                src="https://www.youtube.com/embed/lzUhIHVW1zo"
                 title="Tutorial Magnetotelúrico"
                 className="aspect-[16/9] w-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -159,7 +159,7 @@ const Aprende = () => {
         </div>
       </motion.div>
 
-      <div className="mb-10 flex flex-col items-center justify-center text-center">
+      <div className="mb-10 flex flex-col items-center justify-center px-4 text-center">
         <h3 className="mb-3 font-['Montserrat'] text-2xl font-bold tracking-widest text-slate-900 sm:text-2xl">
           Tutorial de Procesamiento Gravimétrico
         </h3>
@@ -175,13 +175,13 @@ const Aprende = () => {
         <motion.div
           animate={{ opacity: [0.15, 0.3, 0.15] }}
           transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute -inset-4 rounded-[3rem] bg-gradient-to-r from-blue-500/20 via-gold-500 to-amber-500/20 blur-2xl"
+          className="absolute -inset-4 rounded-2xl bg-gradient-to-r from-blue-500/20 via-gold-500 to-amber-500/20 blur-2xl sm:rounded-[3rem]"
         />
-        <div className="relative rounded-[2.8rem] bg-gradient-to-br from-gold-500 via-blue-500/20 to-amber-300/60 p-[3px] shadow-[0_0_60px_rgba(255,100,150,0.08)]">
-          <div className="rounded-[2.6rem] bg-gradient-to-br from-white/95 to-rose-50/95 p-3 shadow-xl">
-            <div className="relative overflow-hidden rounded-[2.2rem] bg-black shadow-inner">
+        <div className="relative rounded-2xl bg-gradient-to-br from-gold-500 via-blue-500/20 to-amber-300/60 p-[3px] shadow-[0_0_60px_rgba(255,100,150,0.08)] sm:rounded-[2.8rem]">
+          <div className="rounded-2xl bg-gradient-to-br from-white/95 to-rose-50/95 p-3 shadow-xl sm:rounded-[2.6rem]">
+            <div className="relative overflow-hidden rounded-2xl bg-black shadow-inner sm:rounded-[2.2rem]">
               <iframe
-                src="https://youtu.be/xBWFjzD98Sg?si=KxVpnVtCBwLVpKbu"
+                src="https://www.youtube.com/embed/xBWFjzD98Sg"
                 title="Tutorial Gravimétrico"
                 className="aspect-[16/9] w-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -206,7 +206,7 @@ const Aprende = () => {
           <p className="mb-4 max-w-2xl font-['Montserrat'] text-base leading-relaxed text-slate-600 sm:text-lg">
             Los datos publicados en este repositorio son de libre acceso para fines académicos y de investigación, siempre que se cite adecuadamente la fuente correspondiente:
           </p>
-          <p className="mb- max-w-2xl font-['Montserrat'] text-base font-extrabold leading-relaxed text-slate-600 sm:text-lg">
+          <p className="mb-4 max-w-2xl font-['Montserrat'] text-base font-extrabold leading-relaxed text-slate-600 sm:text-lg">
             Semillero de Investigación en Geofísica Aplicada y Computacional. (SIGAC), Universidad Industrial de Santander.
           </p>
         </div>

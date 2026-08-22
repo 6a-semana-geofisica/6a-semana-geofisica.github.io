@@ -18,15 +18,15 @@ import Vgeofisica from './components/pages/Vgeofisica.jsx';
 import Resumenes from './components/pages/Resumenes.jsx';
 
 const pageVariants = {
-  initial: { opacity: 0, y: 12 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -12 },
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
 };
 
 const pageTransition = {
   type: 'tween',
   ease: [0.23, 1, 0.32, 1],
-  duration: 0.35,
+  duration: 0.2,
 };
 
 function AnimatedRoutes() {
