@@ -1,0 +1,112 @@
+#modal-invitation-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999999;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#modal-invitation-overlay.show {
+  display: flex;
+  opacity: 1;
+}
+
+#modal-invitation-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px 36px 36px;
+  max-width: 480px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#modal-invitation-overlay.show #modal-invitation-box {
+  transform: scale(1);
+}
+
+#modal-invitation-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #888;
+  line-height: 1;
+  padding: 4px 8px;
+  transition: color 0.2s;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#modal-invitation-close:hover {
+  color: #333;
+}
+
+#modal-invitation-box h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #002855;
+  margin: 0 0 12px;
+  line-height: 1.3;
+}
+
+#modal-invitation-box p {
+  font-size: 15px;
+  color: #555;
+  margin: 0 0 24px;
+  line-height: 1.5;
+}
+
+#modal-invitation-btn {
+  display: inline-block;
+  background: #00629b;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  transition: background 0.2s, transform 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+#modal-invitation-btn:hover {
+  background: #002855;
+  transform: translateY(-1px);
+}
+
+#modal-invitation-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 500px) {
+  #modal-invitation-box {
+    padding: 32px 24px 28px;
+    margin: 16px;
+  }
+
+  #modal-invitation-box h2 {
+    font-size: 19px;
+  }
+
+  #modal-invitation-btn {
+    padding: 12px 28px;
+    font-size: 15px;
+  }
+}
