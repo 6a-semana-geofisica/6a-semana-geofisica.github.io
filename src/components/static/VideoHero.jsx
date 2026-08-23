@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useScrollReveal } from '../../hooks/useScrollReveal.js';
 import { ParallaxOrb } from '../ui/ParallaxOrb.jsx';
 import { TextReveal } from '../ui/TextReveal.jsx';
+import Video from '../../assets/videos/VIDEO_proyecto_general.mp4'
 
 const VideoHero = () => {
   const [titleRef, titleVisible] = useScrollReveal({ margin: '-50px' });
@@ -48,7 +49,7 @@ const VideoHero = () => {
             {/* Contenedor del video */}
             <div className="relative rounded-xl sm:rounded-[2.2rem] overflow-hidden bg-black shadow-inner">
                 <iframe
-                src="https://youtu.be/fOW8Y09GVek?si=RJo_miwNv6bcCh_e"
+                src={Video}
                 title="Video final"
                 className="w-full aspect-[16/9]"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
