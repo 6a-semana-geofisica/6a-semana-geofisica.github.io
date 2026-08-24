@@ -50,9 +50,11 @@ const Estudiantes = () => {
             transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
             className="mb-8 flex items-center justify-center gap-4 sm:mb-20"
           >
-            <TextReveal split="words" stagger={0.05} className="text-center font-['Montserrat'] text-sm italic tracking-wide text-slate-900 sm:text-base sm:tracking-widest lg:text-2xl">
-              "Lo importante es no dejar de cuestionar". (Albert Einstein)
-            </TextReveal>
+            <div className="mb-8 flex items-center justify-center gap-4 sm:mb-20">
+              <h3 className="text-center font-['Montserrat'] text-sm italic tracking-wide text-slate-900 sm:text-base sm:tracking-widest lg:text-2xl">
+                "Lo importante es no dejar de cuestionar". (Albert Einstein) 
+              </h3>
+            </div>
           </motion.div>
 
           <motion.div

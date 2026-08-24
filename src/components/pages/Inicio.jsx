@@ -4,7 +4,6 @@ import { TextReveal } from '../ui/TextReveal.jsx';
 import Hero from '../static/Hero.jsx';
 import AcercaDelEvento from '../ui/AcercaDelEvento.jsx';
 import Card from '../ui/Card.jsx';
-import AnimatedCounter from '../ui/AnimatedCounter.jsx';
 import { teamMembers } from '../../data/Personal.js';
 import VideoHero from '../static/VideoHero.jsx';
 import Button from '../ui/Button.jsx';

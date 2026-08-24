@@ -214,9 +214,11 @@ const Registro = () => {
                   Completa el formulario de inscripción haciendo clic en el botón disponible a continuación o escaneando el código QR del flyer.
                 </p>
                 <div className="flex w-full justify-start">
-                  <AnimatedButton onClick={openModal}>
-                    REGISTRARME
-                  </AnimatedButton>
+                  <a>
+                    <AnimatedButton onClick={openModal}>
+                      REGISTRARME
+                    </AnimatedButton>
+                  </a>
                 </div>
               </div>
 
