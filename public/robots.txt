@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://6a-semana-geofisica.github.io/sitemap.xml
+Sitemap: https://semanadelageofisica/sitemap.xml
